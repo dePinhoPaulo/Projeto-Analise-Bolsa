@@ -3,6 +3,19 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+var img = document.getElementById('imagem');
+
+let rPositon = 0.5;
+
+function mudancaImagem(){
+	if(rPositon < 0.4){
+		img.src = 'images/pic02.png'
+	}else if(rPositon > 0.6){
+		img.src = 'images/pic03.png'
+	}
+}
+
+mudancaImagem();
 
 (function($) {
 
