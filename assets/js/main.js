@@ -3,19 +3,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-var img = document.getElementById('imagem');
-
-let rPositon = 0.5;
-
-function mudancaImagem(){
-	if(rPositon < 0.4){
-		img.src = 'images/pic02.png'
-	}else if(rPositon > 0.6){
-		img.src = 'images/pic03.png'
-	}
-}
-
-mudancaImagem();
 
 (function($) {
 
@@ -82,18 +69,6 @@ mudancaImagem();
 
 				});
 
-	// Sidebar.
-		var $sidebar = $('#sidebar'),
-			$sidebar_inner = $sidebar.children('.inner');
-
-		// Inactive by default on <= large.
-			breakpoints.on('<=large', function() {
-				$sidebar.addClass('inactive');
-			});
-
-			breakpoints.on('>large', function() {
-				$sidebar.removeClass('inactive');
-			});
 
 		// Hack: Workaround for Chrome/Android scrollbar position bug.
 			if (browser.os == 'android'
@@ -101,19 +76,7 @@ mudancaImagem();
 				$('<style>#sidebar .inner::-webkit-scrollbar { display: none; }</style>')
 					.appendTo($head);
 
-		// Toggle.
-			$('<a href="#sidebar" class="toggle">Toggle</a>')
-				.appendTo($sidebar)
-				.on('click', function(event) {
 
-					// Prevent default.
-						event.preventDefault();
-						event.stopPropagation();
-
-					// Toggle.
-						$sidebar.toggleClass('inactive');
-
-				});
 
 		// Events.
 

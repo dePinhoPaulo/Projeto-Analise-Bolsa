@@ -32,16 +32,16 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Olá Investidor </h1>
-											<p>Seje Bem vindo </p>
+											<h1>PETR4 </h1>
+											<p id="analise">Ação sem movimentações</p>
 										</header>
-										<p>Fazemos Analise da bolsa de uma forma simples, para todos os publicos.</p>
+										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
 										<ul class="actions">
-											<li><a href="#" class="button big">Veja mais</a></li>
+											<li><a href="#" class="button big">Learn More</a></li>
 										</ul>
 									</div>
 									<span class="image object">
-										<img id="imagem" src="images/pic05.jpg" alt="" />
+										<img id="imagem" src="images/pic01.png" alt="" />
 									</span>
 									
 								</section>
@@ -68,17 +68,29 @@
 									</ul>
 								</nav>
 
-							
-
-							
-
 						</div>
 					</div>
 
 			</div>
 
 			<script>
-				
+				var img = document.getElementById('imagem');
+				var analise = document.getElementById('analise');
+
+				let rPositon = 0.8;
+
+				function mudancaImagem(){
+					if(rPositon < 0.4){
+						img.src = 'images/pic02.png';
+						analise.innerHTML = "Ação está boa para Compra";
+					}else if(rPositon > 0.6){
+						img.src = 'images/pic03.png';
+						analise.innerHTML = "Ação está boa para Venda";
+					}
+				}
+
+				mudancaImagem();
+
 			</script>
 
 		<!-- Scripts -->
