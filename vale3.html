@@ -15,7 +15,7 @@
 				height: 20px;
 				width: 250px;
 				background-color: #ccc;
-				margin: 10%;
+				margin-bottom: 10%;
 			}
 
 			.barra div{
@@ -51,6 +51,8 @@
 										</header>
 
 										<p>Moimentação da Ação:</p>
+										<div id="rp">RPsition:</div>
+
 										<div class="barra">
 											<div></div>
 										</div>
@@ -93,10 +95,16 @@
 			</div>
 			
 			<script>
-				var img = document.getElementById('imagem');
-				var analise = document.getElementById('analise');
+				let img = document.getElementById('imagem');
+				let analise = document.getElementById('analise');
+				let rp = document.getElementById("rp");
 
-				let rPositon = 0.2461;
+				let rPositon = 0.561;
+
+				const progresso = document.querySelector(".barra div");
+				const alterarProgresso = () => {
+					progresso.setAttribute("style", "width: "+ (rPositon*100) +"%")
+				}
 
 				function mudancaImagem(){
 					if(rPositon < 0.4){
@@ -109,13 +117,10 @@
 				}
 
 				mudancaImagem();
+				alterarProgresso();
 
-				const progresso = document.querySelector(".barra div");
-				const alterarProgresso = () => {
-					progresso.setAttribute("style", "width: "+ (rPositon*100) +"%")
-				}
-				
-				console.log(alterarProgresso());
+				rp.innerHTML = "RPosition: " + rPositon;
+
 
 			</script>
 
